@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Montserrat;
+}
+button {
+  cursor: pointer;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  justify-content: space-between;
+  background-color: silver;
+  color: #fff;
+  box-sizing: border-box;
+  div {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+select {
+  height: 40px;
+  margin-top: 40px;
+  align-self: flex-end;
+  font-size: 18px;
+  padding: 2px 55px 2px 15px;
+  text-align: left;
+  border-radius: 30px;
+  appearance: none;
+  overflow: hidden;
+  background: url("./img/free-icon-drop-down-arrow-60995.png") no-repeat;
+  background-position: 240px;
+}
+.active {
+  background: url("./img/free-icon-arrow-up-4655143.png") no-repeat;
+  background-position: 240px;
+}
+.cards_block {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 32px;
+  row-gap: 49px;
+}
+.card {
+  width: 379px;
+  color: black;
+  word-wrap: break-word;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .description {
+    margin-top: 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      font-size: 24px;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: #888;
+    }
+    h3 {
+      font-size: 24px;
+    }
+  }
+}
