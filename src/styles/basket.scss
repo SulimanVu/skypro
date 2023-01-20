@@ -20,8 +20,8 @@
 .product {
   height: 173px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
   img {
     width: 173px;
     height: 100%;
@@ -39,6 +39,7 @@
       width: fit-content;
       span {
         text-decoration: underline;
+        cursor: pointer;
       }
       span:nth-child(1) {
         margin-right: 30px;
@@ -48,6 +49,9 @@
   input {
     width: 71px;
     height: 51px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
     text-align: center;
     font-weight: 600;
     font-size: 14px;
@@ -57,8 +61,10 @@
   }
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
+    cursor: pointer;
+    opacity: 1;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #f7f6f6;
     margin: 0;
   }
 }
@@ -69,6 +75,80 @@
   justify-content: space-between;
   padding-right: 20px;
 }
-.prod{
-  width: 70%;
+.prod {
+  margin-right: 33px;
+  width: 100%;
+}
+
+.request {
+  height: 556px;
+  width: 379px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f7f6f6;
+  border-radius: 20px;
+  & > h2 {
+    margin-top: 42px;
+    font-family: "Poppins";
+    font-weight: 600;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .form__item {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      width: 85%;
+      margin: 41px auto 0;
+      input {
+        font-family: "Segoe UI";
+        padding: 3px 0 5px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 2px solid #cacdd8;
+        background-color: #f7f6f600;
+        outline: none;
+        width: 100%;
+      }
+      label {
+        font-size: 14px;
+        color: #000;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: -3px;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 40px;
+        transition: 0.3s;
+      }
+      & input:focus ~ label,
+      & input:not(:focus):valid ~ label {
+        top: -25px;
+        font-size: 12px;
+      }
+    }
+  }
+  .price {
+    text-align: center;
+    margin-top: 64px;
+    h2 {
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    button {
+      width: 290px;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #f7f6f6;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0 45px;
+    }
+  }
 }

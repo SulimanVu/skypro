@@ -3,6 +3,8 @@ import React from "react";
 const Card = ({ img, header, title, price, index }) => {
   return (
     <div className="card" key={index}>
+      <img src={require("../img/icons8-favorite-24.png")} alt="#" className="like" />
+      <img src={require("../img/icons8-shopping-bag-50.png")} alt="#" className="bag" />
       <img src={img} alt="#" />
       <div className="description">
         <h2>{header}</h2>
