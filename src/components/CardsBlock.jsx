@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import "../styles/card.scss";
 
 const CardsBlock = () => {
   const arr = [
@@ -12,44 +13,42 @@ const CardsBlock = () => {
     },
     {
       img: require("../img/Rectangle 23.png"),
-      header: "Кровать TATRAN",
+      header: "Кресло VILORA",
       title:
-        "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      price: "120 000",
+        "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ",
+      price: "21 000",
     },
     {
       img: require("../img/Rectangle 24.png"),
-      header: "Кровать TATRAN",
-      title:
-        "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      price: "120 000",
+      header: "Стол MENU",
+      title: "Европейский дуб - отличается особой прочностью и стабильностью.",
+      price: "34 000",
     },
     {
       img: require("../img/Rectangle 22 (1).png"),
-      header: "Кровать TATRAN",
+      header: "Диван ASKESTA",
       title:
-        "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      price: "120 000",
+        "Благодаря защелкивающемуся механизму диван легко раскладывается в комфортную кровать",
+      price: "68 000",
     },
     {
       img: require("../img/Rectangle 23 (1).png"),
-      header: "Кровать TATRAN",
+      header: "Кресло LUNAR",
       title:
-        "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      price: "120 000",
+        "Прекрасно переносит солнечные лучи, перепады влажности и любые осадки",
+      price: "40 000",
     },
     {
       img: require("../img/Rectangle 24 (1).png"),
-      header: "Кровать TATRAN",
-      title:
-        "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      price: "120 000",
+      header: "Шкаф Nastan",
+      title: "Мебель может быть оснащена разнообразными системами подсветки.",
+      price: "80 000",
     },
   ];
   return (
     <div className="cards_block">
-      {arr.map((item) => {
-        return <Card {...item} />;
+      {arr.map((item, index) => {
+        return <Card {...item} key={index} />;
       })}
     </div>
   );

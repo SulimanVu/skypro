@@ -1,0 +1,16 @@
+header {
+    width: 79%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    justify-content: space-between;
+    background-color: silver;
+    color: #fff;
+    box-sizing: border-box;
+    div {
+      width: 15%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
