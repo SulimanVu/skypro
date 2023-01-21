@@ -3,12 +3,18 @@ import { useState } from "react";
 
 const ProductBascet = ({ img, header, title, price, index }) => {
   const [current, setCurrent] = useState(1);
-  const [curPrice, setCurPrice] = useState(Number(price));
+  const [curPrice, setCurPrice] = useState(price);
+
   const handleChange = (e) => {
     setCurrent(() => Number(e.target.value));
     setCurPrice(price * e.target.value);
     localStorage.setItem("price", curPrice);
   };
+
+  const value =
+    curPrice > 100000
+      ? `${curPrice.toString().slice(0, 3)} ${curPrice.toString().slice(-3)}`
+      : `${curPrice.toString().slice(0, 2)} ${curPrice.toString().slice(-3)}`;
 
   return (
     <>
@@ -17,7 +23,7 @@ const ProductBascet = ({ img, header, title, price, index }) => {
         <div>
           <h2>{header}</h2>
           <span>{title}</span>
-          <h3>{curPrice} руб.</h3>
+          <h3>{curPrice !== 0 ? value : "0"} руб.</h3>
           <div>
             <span>Избранные</span>
             <span>Удалить</span>

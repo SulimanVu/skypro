@@ -1,31 +1,15 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import ProductBascet from "../components/ProductBascet";
+import { arr } from "../array";
 
 const Basket = () => {
-  const arr = [
-    {
-      img: require("../img/Rectangle 22.png"),
-      header: "Кровать TATRAN",
-      title:
-        "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      price: "120000",
-    },
-    {
-      img: require("../img/Rectangle 23.png"),
-      header: "Кресло VILORA",
-      title:
-        "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ",
-      price: "21000",
-    },
-    {
-      img: require("../img/Rectangle 24.png"),
-      header: "Стол MENU",
-      title: "Европейский дуб - отличается особой прочностью и стабильностью.",
-      price: "34000",
-    },
-  ];
   const [result, setResult] = useState(localStorage.getItem("price"));
+
+  const [product, setProduct] = useState(
+    arr.filter((item) => localStorage.getItem("cards")?.includes(item.id)) ||
+      null
+  );
 
   useEffect(() => {
     setResult(localStorage.getItem("price"));
@@ -40,12 +24,13 @@ const Basket = () => {
         </div>
         <hr />
         <div className="product_block">
-          {arr.map((item, index) => {
+          {product?.map((item, index) => {
             return <ProductBascet {...item} key={index} />;
           })}
+          {product === null && "Нет товаров"}
         </div>
         <div className="buttons">
-          <button>Очистить корзину</button>
+          <button onClick={() => setProduct(null)}>Очистить корзину</button>
           <button>Продолжить покупки</button>
         </div>
       </div>
@@ -67,9 +52,9 @@ const Basket = () => {
         </form>
         <div className="price">
           <h2>
-            Итого:
+            Итого: &nbsp;
             <b>
-              {arr.reduce((sum, item) => Number(sum) + Number(item.price), 0)}{" "}
+              {arr.reduce((sum, item) => Number(sum) + Number(item.price), 0)}
               руб.
             </b>
           </h2>

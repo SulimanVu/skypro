@@ -11,7 +11,6 @@ const Select = () => {
       className={select === true && "active"}
     >
       <option selected>Порядок: сперва новые</option>
-      <option>сперва старые</option>
       <option>сперва дорогие</option>
       <option>сперва дешевые</option>
     </select>
