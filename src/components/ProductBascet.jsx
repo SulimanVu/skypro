@@ -31,7 +31,6 @@ const ProductBascet = ({ img, header, title, price, index }) => {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <hr />
     </>
   );
 };

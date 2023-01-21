@@ -1,16 +1,34 @@
 header {
-    width: 79%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    padding: 15px 10px;
-    justify-content: space-between;
-    background-color: silver;
-    color: #fff;
-    box-sizing: border-box;
-    div {
-      width: 15%;
-      display: flex;
-      justify-content: space-between;
+  width: 83.3%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  justify-content: space-between;
+  background-color: silver;
+  color: #fff;
+  box-sizing: border-box;
+  h1 {
+    font-size: 36px;
+    @media screen and (max-width: 400px) {
+      font-size: 18px;
     }
   }
+  div {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 400px) {
+      width: 25%;
+    }
+  }
+  .images {
+    width: 15%;
+    img {
+      width: 20px;
+      height: 20px;
+      filter: invert(100%);
+    }
+  }
+}

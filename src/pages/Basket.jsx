@@ -44,6 +44,10 @@ const Basket = () => {
             return <ProductBascet {...item} key={index} />;
           })}
         </div>
+        <div className="buttons">
+          <button>Очистить корзину</button>
+          <button>Продолжить покупки</button>
+        </div>
       </div>
       <div className="request">
         <h2>Оформление заказа</h2>
@@ -63,7 +67,7 @@ const Basket = () => {
         </form>
         <div className="price">
           <h2>
-            Итого:{" "}
+            Итого:
             <b>
               {arr.reduce((sum, item) => Number(sum) + Number(item.price), 0)}{" "}
               руб.
