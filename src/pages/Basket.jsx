@@ -11,9 +11,31 @@ const Basket = () => {
       null
   );
 
+  const [prod_sum, setProd] = useState(
+    Number(localStorage.getItem("price1")) +
+      Number(localStorage.getItem("price2")) +
+      Number(localStorage.getItem("price3")) +
+      Number(localStorage.getItem("price4")) +
+      Number(localStorage.getItem("price5")) +
+      Number(localStorage.getItem("price6"))
+  );
+
+  const hendleDelete = () => {
+    setProduct(null);
+    localStorage.clear("cards");
+  };
+
   useEffect(() => {
     setResult(localStorage.getItem("price"));
-  }, [result]);
+    setProd(
+      Number(localStorage.getItem("price1")) +
+        Number(localStorage.getItem("price2")) +
+        Number(localStorage.getItem("price3")) +
+        Number(localStorage.getItem("price4")) +
+        Number(localStorage.getItem("price5")) +
+        Number(localStorage.getItem("price6"))
+    );
+  }, [result, product]);
 
   return (
     <div className="basket">
@@ -30,7 +52,7 @@ const Basket = () => {
           {product === null && "Нет товаров"}
         </div>
         <div className="buttons">
-          <button onClick={() => setProduct(null)}>Очистить корзину</button>
+          <button onClick={() => hendleDelete()}>Очистить корзину</button>
           <button>Продолжить покупки</button>
         </div>
       </div>
@@ -54,7 +76,7 @@ const Basket = () => {
           <h2>
             Итого: &nbsp;
             <b>
-              {arr.reduce((sum, item) => Number(sum) + Number(item.price), 0)}
+              {prod_sum}
               руб.
             </b>
           </h2>
