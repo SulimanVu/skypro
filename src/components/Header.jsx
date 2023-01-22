@@ -12,15 +12,15 @@ const Header = () => {
 
   return (
     <header>
-      <Link className="link" to="/">
+      <Link className="link" to="/skypro/">
         <h1>Интерьер</h1>
       </Link>
       {wind > 450 ? (
         <div>
-          <Link className="link" to="/">
+          <Link className="link" to="/skypro">
             <span>Каталог</span>
           </Link>
-          <Link className="link" to="/basket">
+          <Link className="link" to="/skypro/basket">
             <span>Корзина</span>
           </Link>
         </div>
@@ -29,7 +29,7 @@ const Header = () => {
           <Link className="link" to="/">
             <img src={require("../img/icons8-table-32.png")} alt="#" />
           </Link>
-          <Link className="link" to="/basket">
+          <Link className="link" to="/skypro/basket">
             <img src={require("../img/icons8-shopping-cart-24.png")} alt="#" />
           </Link>
         </div>
