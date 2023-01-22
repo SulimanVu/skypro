@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProductBascet from "../components/ProductBascet";
 import { arr } from "../array";
 import { useSelector } from "react-redux";
+import "../styles/basket.scss";
 
 const Basket = () => {
   const basket = useSelector((state) => state.basketSlice.price);
@@ -28,7 +29,6 @@ const Basket = () => {
           <span>Товар</span>
           <span>К-во</span>
         </div>
-        <hr />
         <div className="product_block">
           {product?.map((item, index) => {
             return <ProductBascet {...item} key={index} />;
@@ -64,7 +64,8 @@ const Basket = () => {
                 ? basket > 1000000
                   ? `${basket.toString().slice(0, 1)} ${val}`
                   : val
-                : "0"} руб.
+                : "0"}{" "}
+              руб.
             </b>
           </h2>
           <button>Оформить заказ</button>
