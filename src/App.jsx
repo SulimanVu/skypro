@@ -12,8 +12,11 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/https://sulimanvu.github.io/skypro/" element={<Main />} />
-        <Route path="https://sulimanvu.github.io/skypro/basket" element={<Basket />} />
+        <Route path="https://sulimanvu.github.io/skypro/" element={<Main />} />
+        <Route
+          path="https://sulimanvu.github.io/skypro/basket"
+          element={<Basket />}
+        />
       </Routes>
     </>
   );
