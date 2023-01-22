@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { decrement, increment } from "../features/basketSlice";
 
-const ProductBascet = ({ id, img, header, title, price, index, value }) => {
+const ProductBascet = ({ img, header, title, price, index }) => {
   const [current, setCurrent] = useState(1);
   const [curPrice, setCurPrice] = useState(price);
+  const [sravnenie, setSravnenie] = useState(1);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setCurrent(() => Number(e.target.value));
     setCurPrice(price * e.target.value);
-    localStorage.setItem(`price${id}`, price * e.target.value);
+    if (sravnenie < e.target.value) {
+      dispatch(increment(Number(price)));
+    } else {
+      dispatch(decrement(Number(price)));
+    }
+    setSravnenie(e.target.value);
   };
 
   const val =
@@ -16,6 +25,9 @@ const ProductBascet = ({ id, img, header, title, price, index, value }) => {
       ? `${curPrice.toString().slice(0, 3)} ${curPrice.toString().slice(-3)}`
       : `${curPrice.toString().slice(0, 2)} ${curPrice.toString().slice(-3)}`;
 
+  useEffect(() => {
+    dispatch(increment(Number(price)));
+  }, []);
   return (
     <>
       <div className="product" key={index}>

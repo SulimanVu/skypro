@@ -1,41 +1,20 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import ProductBascet from "../components/ProductBascet";
 import { arr } from "../array";
+import { useSelector } from "react-redux";
 
 const Basket = () => {
-  const [result, setResult] = useState(localStorage.getItem("price"));
+  const basket = useSelector((state) => state.basketSlice.price);
 
   const [product, setProduct] = useState(
     arr.filter((item) => localStorage.getItem("cards")?.includes(item.id)) ||
       null
   );
 
-  const [prod_sum, setProd] = useState(
-    Number(localStorage.getItem("price1")) +
-      Number(localStorage.getItem("price2")) +
-      Number(localStorage.getItem("price3")) +
-      Number(localStorage.getItem("price4")) +
-      Number(localStorage.getItem("price5")) +
-      Number(localStorage.getItem("price6"))
-  );
-
   const hendleDelete = () => {
     setProduct(null);
     localStorage.clear("cards");
   };
-
-  useEffect(() => {
-    setResult(localStorage.getItem("price"));
-    setProd(
-      Number(localStorage.getItem("price1")) +
-        Number(localStorage.getItem("price2")) +
-        Number(localStorage.getItem("price3")) +
-        Number(localStorage.getItem("price4")) +
-        Number(localStorage.getItem("price5")) +
-        Number(localStorage.getItem("price6"))
-    );
-  }, [result, product]);
 
   return (
     <div className="basket">
@@ -76,7 +55,8 @@ const Basket = () => {
           <h2>
             Итого: &nbsp;
             <b>
-              {prod_sum}
+              {basket ||
+                product.reduce((sum, item) => (sum += Number(item.price)), 0)}
               руб.
             </b>
           </h2>
