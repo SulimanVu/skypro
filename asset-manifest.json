@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/skypro/static/css/main.5cc64cc5.css",
+    "main.js": "/skypro/static/js/main.9c4a9efd.js",
+    "static/media/Rectangle 23 (1).png": "/skypro/static/media/Rectangle 23 (1).6c5153753015dddc95c5.png",
+    "static/media/Rectangle 24.png": "/skypro/static/media/Rectangle 24.fcea0a49f5e4e5d5d305.png",
+    "static/media/Rectangle 24 (1).png": "/skypro/static/media/Rectangle 24 (1).809d5c6d8bdc36754a77.png",
+    "static/media/Rectangle 22 (1).png": "/skypro/static/media/Rectangle 22 (1).414e15b1f6f7061172e8.png",
+    "static/media/Rectangle 23.png": "/skypro/static/media/Rectangle 23.dd893bd5dcc60a1afcd0.png",
+    "static/media/Rectangle 22.png": "/skypro/static/media/Rectangle 22.8995d1bac49b97fe0865.png",
+    "static/media/montserrat-all-400-normal.woff": "/skypro/static/media/montserrat-all-400-normal.327fab0afc997a2d9b16.woff",
+    "static/media/montserrat-latin-400-normal.woff2": "/skypro/static/media/montserrat-latin-400-normal.acb6629fe45c43ad5d8b.woff2",
+    "static/media/montserrat-latin-ext-400-normal.woff2": "/skypro/static/media/montserrat-latin-ext-400-normal.0204ec08a4b574088f02.woff2",
+    "static/media/montserrat-cyrillic-ext-400-normal.woff2": "/skypro/static/media/montserrat-cyrillic-ext-400-normal.bbf9e820a2563aac0d8b.woff2",
+    "static/media/montserrat-cyrillic-400-normal.woff2": "/skypro/static/media/montserrat-cyrillic-400-normal.e5c5c19c23e370a342c8.woff2",
+    "static/media/montserrat-vietnamese-400-normal.woff2": "/skypro/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
+    "index.html": "/skypro/index.html",
+    "main.5cc64cc5.css.map": "/skypro/static/css/main.5cc64cc5.css.map",
+    "main.9c4a9efd.js.map": "/skypro/static/js/main.9c4a9efd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cc64cc5.css",
+    "static/js/main.9c4a9efd.js"
+  ]
+}
