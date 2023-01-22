@@ -1,7 +1,7 @@
 {
   "name": "skyeng",
   "version": "0.1.0",
-  "homepage": "https://SulimanVu.github.io/skyeng-test",
+  "homepage": "https://SulimanVu.github.io/skyeng",
   "private": true,
   "dependencies": {
     "@fontsource/montserrat": "^4.5.14",
