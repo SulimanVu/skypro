@@ -12,8 +12,8 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/basket" element={<Basket />} />
+        <Route path="/skypro" element={<Main />} />
+        <Route path="/skypro/basket" element={<Basket />} />
       </Routes>
     </>
   );
