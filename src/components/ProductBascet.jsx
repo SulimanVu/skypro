@@ -27,7 +27,8 @@ const ProductBascet = ({ img, header, title, price, index }) => {
 
   useEffect(() => {
     dispatch(increment(Number(price)));
-  }, []);
+  }, [dispatch, price]);
+
   return (
     <>
       <div className="product" key={index}>

@@ -16,6 +16,11 @@ const Basket = () => {
     localStorage.clear("cards");
   };
 
+  const val =
+    basket >= 100000
+      ? `${basket.toString().slice(0, 3)} ${basket.toString().slice(-3)}`
+      : `${basket.toString().slice(0, 2)} ${basket.toString().slice(-3)}`;
+
   return (
     <div className="basket">
       <div className="prod">
@@ -53,11 +58,13 @@ const Basket = () => {
         </form>
         <div className="price">
           <h2>
-            Итого: &nbsp;
+            Итого:
             <b>
-              {basket ||
-                product.reduce((sum, item) => (sum += Number(item.price)), 0)}
-              руб.
+              {basket !== 0
+                ? basket > 1000000
+                  ? `${basket.toString().slice(0, 1)} ${val}`
+                  : val
+                : "0"} руб.
             </b>
           </h2>
           <button>Оформить заказ</button>

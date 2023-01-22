@@ -4,20 +4,22 @@
   width: 83.3%;
   margin: 0 auto 200px;
 }
-select {
-  height: 40px;
-  margin-top: 40px;
+.select {
+  margin-top: 33px;
   align-self: flex-end;
-  font-size: 18px;
-  padding: 2px 55px 2px 15px;
-  text-align: left;
-  border-radius: 30px;
-  appearance: none;
-  overflow: hidden;
-  background: url("../img/free-icon-drop-down-arrow-60995.png") no-repeat;
-  background-position: 260px;
+  select {
+    height: 40px; 
+    font-size: 18px;
+    padding: 2px 55px 2px 15px;
+    text-align: left;
+    border-radius: 30px;
+    appearance: none;
+    overflow: hidden;
+    background: url("../img/free-icon-drop-down-arrow-60995.png") no-repeat;
+    background-position: 285px;
+  }
 }
 .active {
   background: url("../img/free-icon-arrow-up-4655143.png") no-repeat;
-  background-position: 260px;
+  background-position: 285px;
 }
