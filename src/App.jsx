@@ -11,7 +11,10 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Routes>
+        <Route path="/skypro" element={<Main />} />
+        <Route path="/skypro/basket" element={<Basket />} />
+      </Routes>
     </>
   );
 }
