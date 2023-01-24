@@ -5,6 +5,11 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5%;
   row-gap: 49px;
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+    column-gap: 0%;
+    margin-left: -26px;
+  }
 }
 .card {
   width: 379px;
